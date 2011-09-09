@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>Pullquote</name>
+	<creationDate>September 8, 2011</creationDate>
+	<author>Andy Soell</author>
+	<authorEmail>andy@teamsoell.com</authorEmail>
+	<authorUrl>http://andy.teamsoell.com</authorUrl>
+	<copyright>Copyright (c) 2011 The Genteel</copyright>
+	<version>1.0</version>
+	<description>Component for managing site featured pullquotes</description>
+
+ 
+	<administration>
+		<menu>Pullquote</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>pullquote.php</filename>
+			<filename>controller.php</filename>
+			<folder>controllers</folder>			
+			<folder>tables</folder>
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+		</files>		
+	</administration>
+</extension>

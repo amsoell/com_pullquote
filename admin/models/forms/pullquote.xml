@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="fulltext"
+			type="text"
+			label="Quote"
+			description="Quote"
+			size="40"
+			class="inputbox"
+			default=""
+		/>
+		<field
+			name="attribution"
+			type="text"
+			label="Attributed to"
+			description="Attributed to"
+			size="40"
+			class="inputbox"
+			default=""
+		/>	
+		<field
+			name="article"
+			type="sql"
+			label="Link to article"
+			description="Article to link to"
+      query="select '' as id, '' as title, 99999999 as publish_up UNION select id, CONCAT('(', id, ') ', title) as title, publish_up from #__content order by publish_up DESC"
+      key_field="id"
+      value_field="title"			
+		/>				
+		<field
+		  name="published"
+		  type="list"
+		  label="Published"
+		  >
+		  <option value="1">Yes</option>
+		  <option value="0">No</option>
+		</field>
+	</fieldset>
+</form>
